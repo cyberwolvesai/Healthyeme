@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Sellers | The Cinnamon Kitchen</title>
+  <meta name="description" content="Best selling plant-based cookies, crackers, nut butters and more. The Cinnamon Kitchen.">
+  <link rel="stylesheet" href="static/tck.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="promo-bar">Delhi NCR orders received by 12:00 midnight are delivered the next day | PAN INDIA orders usually take 5-7 days to deliver | Flat ₹500 off on all orders on purchase of ₹5000. Use code <strong>15PARTY</strong></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+      <a href="index.html" class="header-logo"><img src="https://via.placeholder.com/144x44/2d2a26/ffffff?text=TCK" alt="The Cinnamon Kitchen" width="144" height="44"></a>
+      <nav class="header-nav">
+        <a href="valentine.html">TCK's Valentine Edit</a>
+        <a href="winter-menu.html">Winter Menu</a>
+        <a href="shop-all.html">Shop All</a>
+        <a href="best-sellers.html">Best Sellers</a>
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button">Shop By Type ▾</button>
+          <div class="dropdown-menu">
+            <a href="fresh-cakes-bakes.html">Fresh Cakes & Bakes</a>
+            <a href="cookies-baked-goods.html">Cookies & Baked Goods</a>
+            <a href="nut-butters-spreads.html">Nut Butters & Spreads</a>
+            <a href="snacks-bites.html">Snacks & Bites</a>
+            <a href="granola-breakfast.html">Granola & Breakfast</a>
+            <a href="pantry-staples.html">Pantry Staples</a>
+            <a href="shop-all.html">Shop All</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button">By Diet ▾</button>
+          <div class="dropdown-menu">
+            <a href="diet-vegan.html">Vegan</a>
+            <a href="diet-keto.html">Keto Friendly</a>
+            <a href="diet-loved-by-children.html">Loved by Children</a>
+            <a href="diet-lactose-free.html">Lactose & Dairy Free</a>
+            <a href="shop-all.html">Shop All</a>
+          </div>
+        </div>
+        <a href="about.html">About Us</a>
+      </nav>
+      <div class="header-actions">
+        <a href="search.html" class="search-btn" aria-label="Search">Search</a>
+        <a href="login.html" class="login-link">Sign in / Login</a>
+        <a href="cart.html" class="cart-link">Cart <span class="cart-count" id="header-cart-count">0</span> items</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" type="button" aria-label="Close menu">×</button>
+    <a href="valentine.html">TCK's Valentine Edit</a>
+    <a href="winter-menu.html">Winter Menu</a>
+    <a href="shop-all.html">Shop All</a>
+    <a href="best-sellers.html">Best Sellers</a>
+    <a href="fresh-cakes-bakes.html">Fresh Cakes & Bakes</a>
+    <a href="cookies-baked-goods.html">Cookies & Baked Goods</a>
+    <a href="nut-butters-spreads.html">Nut Butters & Spreads</a>
+    <a href="snacks-bites.html">Snacks & Bites</a>
+    <a href="granola-breakfast.html">Granola & Breakfast</a>
+    <a href="pantry-staples.html">Pantry Staples</a>
+    <a href="diet-vegan.html">Vegan</a>
+    <a href="diet-keto.html">Keto Friendly</a>
+    <a href="diet-loved-by-children.html">Loved by Children</a>
+    <a href="diet-lactose-free.html">Lactose & Dairy Free</a>
+    <a href="about.html">About Us</a>
+    <a href="login.html">Sign in / Login</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+
+  <main class="shop-page">
+    <div class="container">
+      <div class="collection-hero">
+        <h1>Best Sellers</h1>
+        <p>Our most loved bakes &amp; snacks. Ships Pan India.</p>
+      </div>
+      <div class="shop-layout">
+        <aside class="shop-filters">
+          <h3>Filter By</h3>
+          <div class="filter-group">
+            <label>Delivery</label>
+            <select id="filter-delivery">
+              <option value="">All</option>
+              <option value="pan-india">Pan India</option>
+              <option value="ncr">Delhi NCR Only</option>
+            </select>
+          </div>
+          <button type="button" class="apply-filters-btn" id="apply-filters">Apply</button>
+        </aside>
+        <div class="product-grid" id="shop-product-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header"><h3>Your cart</h3><button type="button" class="cart-drawer-close" aria-label="Close cart">×</button></div>
+    <div class="cart-drawer-body"><div class="cart-empty" id="cart-empty">Your cart is empty</div><div id="cart-items-list"></div></div>
+    <div class="cart-drawer-footer" id="cart-footer" style="display:none;"><p class="cart-total">Subtotal: ₹<span id="cart-subtotal">0</span></p><a href="checkout.html" class="btn-primary">Proceed to Checkout</a></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-newsletter"><h4>Newsletter</h4><p>Join us for new flavours, offers and stories from the kitchen.</p><form action="#" method="post" class="newsletter-form"><input type="email" name="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></div>
+      <div class="footer-links"><h4>Shop</h4><ul><li><a href="shop-all.html">Shop All</a></li><li><a href="best-sellers.html">Best Sellers</a></li><li><a href="fresh-cakes-bakes.html">Fresh Cakes & Bakes</a></li><li><a href="cookies-baked-goods.html">Cookies</a></li><li><a href="nut-butters-spreads.html">Nut Butters</a></li></ul></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="terms.html">Terms</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The Cinnamon Kitchen.</p><div class="footer-social"><a href="#" aria-label="Instagram">Instagram</a> <a href="#" aria-label="Facebook">Facebook</a></div><div class="footer-payment-icons"><img src="https://via.placeholder.com/40x24/fff/999?text=Card" alt="" width="40" height="24"><img src="https://via.placeholder.com/40x24/fff/999?text=UPI" alt="" width="40" height="24"></div></div>
+  </footer>
+
+  <script src="data/products.js"></script>
+  <script src="static/tck.js"></script>
+  <script>
+    (function () {
+      function renderProduct(p) {
+        var ship = (p.ship || '').indexOf('Delhi') >= 0 ? 'Delhi/NCR Only' : 'Ships Pan India';
+        return '<article class="product-card"><div class="card-image"><span class="ship-badge">' + ship + '</span><img src="' + p.img + '" alt="' + p.name + '"></div><div class="card-body"><p class="card-weight">' + p.weight + '</p><p class="card-tagline">' + p.tagline + '</p><h4 class="card-title">' + p.name + '</h4><p class="card-price">₹ ' + p.price + '</p><div class="card-rating"><span class="stars">★</span> ' + p.rating + '</div><button type="button" class="add-to-cart-btn" data-id="' + p.id + '">Add to Cart</button></div></article>';
+      }
+      function getList() {
+        var list = (typeof TCK_PRODUCTS !== 'undefined' ? TCK_PRODUCTS : []).slice();
+        list.sort(function (a, b) { return (b.rating || 0) - (a.rating || 0); });
+        var delivery = (document.getElementById('filter-delivery') || {}).value;
+        if (delivery === 'pan-india') list = list.filter(function (p) { return (p.ship || '').indexOf('Pan India') >= 0; });
+        if (delivery === 'ncr') list = list.filter(function (p) { return (p.ship || '').indexOf('Delhi') >= 0; });
+        return list;
+      }
+      function render() {
+        var grid = document.getElementById('shop-product-grid');
+        if (!grid) return;
+        grid.innerHTML = getList().map(renderProduct).join('');
+      }
+      document.getElementById('apply-filters') && document.getElementById('apply-filters').addEventListener('click', render);
+      document.getElementById('filter-delivery') && document.getElementById('filter-delivery').addEventListener('change', render);
+      if (typeof TCK_PRODUCTS !== 'undefined') render(); else document.addEventListener('DOMContentLoaded', render);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winter Menu | The Cinnamon Kitchen</title>
+  <link rel="stylesheet" href="static/tck.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="promo-bar">Code <strong>15PARTY</strong></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="menu-toggle" aria-label="Open menu" type="button">&#9776;</button>
+      <a href="index.html" class="header-logo"><img src="https://via.placeholder.com/144x44/2d2a26/ffffff?text=TCK" alt="TCK" width="144" height="44"></a>
+      <nav class="header-nav"><a href="valentine.html">TCK Valentine Edit</a><a href="winter-menu.html">Winter Menu</a><a href="shop-all.html">Shop All</a><a href="best-sellers.html">Best Sellers</a><a href="about.html">About Us</a></nav>
+      <div class="header-actions"><a href="login.html" class="login-link">Sign in</a><a href="cart.html" class="cart-link">Cart <span class="cart-count" id="header-cart-count">0</span> items</a></div>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" type="button" aria-label="Close">x</button>
+    <a href="shop-all.html">Shop All</a><a href="best-sellers.html">Best Sellers</a><a href="about.html">About Us</a><a href="login.html">Sign in</a><a href="cart.html">Cart</a>
+  </nav>
+  <main class="shop-page">
+    <div class="container">
+      <div class="collection-hero"><h1>Winter Menu</h1><p>Seasonal bakes. Ships Pan India.</p></div>
+      <div class="product-grid" id="shop-product-grid"></div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-bottom"><p>2025 The Cinnamon Kitchen.</p></div></footer>
+  <script>window.TCK_COLLECTION={type:"category",value:"all"};</script>
+  <script src="data/products.js"></script>
+  <script src="static/tck.js"></script>
+  <script>
+  (function(){
+    var g=document.getElementById("shop-product-grid");
+    if(!g||typeof TCK_PRODUCTS==="undefined")return;
+    var list=TCK_PRODUCTS.slice(0,16);
+    function card(p){var ship=(p.ship||"").indexOf("Delhi")>=0?"Delhi/NCR Only":"Ships Pan India";return '<article class="product-card"><div class="card-image"><span class="ship-badge">'+ship+'</span><img src="'+p.img+'" alt="'+p.name+'"></div><div class="card-body"><p class="card-weight">'+p.weight+'</p><p class="card-tagline">'+p.tagline+'</p><h4 class="card-title">'+p.name+'</h4><p class="card-price">Rs. '+p.price+'</p><div class="card-rating">★ '+p.rating+'</div><button type="button" class="add-to-cart-btn" data-id="'+p.id+'">Add to Cart</button></div></article>';}
+    g.innerHTML=list.map(card).join("");
+  })();
+  </script>
+</body>
+</html>

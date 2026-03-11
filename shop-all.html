@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All | Healthyeme</title>
+  <meta name="description" content="Shop almond milk, nut butters, cookies and granola. Pure. Fresh. Plant-Based. Pan India delivery.">
+  <link rel="stylesheet" href="static/tck.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="promo-bar">Free delivery on orders over ₹500 | Pan India 5–7 days</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+      <a href="index.html" class="header-logo"><img src="https://via.placeholder.com/144x44/4a7c59/ffffff?text=Healthyeme" alt="Healthyeme" width="144" height="44"></a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="shop-all.html">Shop All</a>
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button">Shop ▾</button>
+          <div class="dropdown-menu">
+            <a href="shop-all.html">All Products</a>
+            <a href="shop-all.html?type=drinks">Drinks</a>
+            <a href="shop-all.html?type=spreads">Spreads</a>
+            <a href="shop-all.html?type=bakes">Bakes & Breakfast</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-link">Sign in</a>
+        <a href="cart.html" class="cart-link">Cart <span class="cart-count" id="header-cart-count">0</span> items</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" type="button" aria-label="Close menu">×</button>
+    <a href="shop-all.html">Shop All</a>
+    <a href="shop-all.html?type=drinks">Drinks</a>
+    <a href="shop-all.html?type=spreads">Spreads</a>
+    <a href="shop-all.html?type=bakes">Bakes & Breakfast</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Sign in</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+
+  <main class="shop-page">
+    <div class="container">
+      <div class="collection-hero">
+        <h1>Shop All</h1>
+        <p>Pure. Fresh. Plant-Based. Ships Pan India.</p>
+      </div>
+      <div class="sort-row">
+        <span>Filters</span>
+        <select class="sort-select" id="sort-select" aria-label="Sort by">
+          <option value="featured">Sort by: Featured</option>
+          <option value="best-selling">Best selling</option>
+          <option value="price-asc">Price, low to high</option>
+          <option value="price-desc">Price, high to low</option>
+        </select>
+      </div>
+      <div class="shop-layout">
+        <aside class="shop-filters">
+          <h3>Category</h3>
+          <div class="filter-group">
+            <label>Type</label>
+            <select id="filter-category">
+              <option value="">All</option>
+              <option value="drinks">Drinks</option>
+              <option value="spreads">Spreads</option>
+              <option value="bakes">Bakes & Breakfast</option>
+            </select>
+          </div>
+          <button type="button" class="apply-filters-btn" id="apply-filters">Apply</button>
+        </aside>
+        <div class="product-grid" id="shop-product-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your cart</h3>
+      <button type="button" class="cart-drawer-close" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-drawer-body">
+      <div class="cart-empty" id="cart-empty">Your cart is empty</div>
+      <div id="cart-items-list"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cart-footer" style="display:none;">
+      <p class="cart-total">Subtotal: ₹<span id="cart-subtotal">0</span></p>
+      <a href="checkout.html" class="btn-primary">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-newsletter">
+        <h4>Healthyeme</h4>
+        <p>Pure. Fresh. Plant-Based. Join us for new flavours and offers.</p>
+        <form action="#" method="post" class="newsletter-form"><input type="email" name="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop-all.html">Shop All</a></li>
+          <li><a href="shop-all.html?type=drinks">Drinks</a></li>
+          <li><a href="shop-all.html?type=spreads">Spreads</a></li>
+          <li><a href="shop-all.html?type=bakes">Bakes</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Healthyeme. All rights reserved.</p>
+      <div class="footer-social"><a href="#" aria-label="Instagram">Instagram</a> <a href="#" aria-label="Facebook">Facebook</a></div>
+    </div>
+  </footer>
+
+  <script src="data/products.js"></script>
+  <script src="static/tck.js"></script>
+  <script>
+    (function () {
+      function renderProduct(p) {
+        const ship = (p.ship || '').indexOf('Delhi') >= 0 ? 'Delhi/NCR Only' : 'Ships Pan India';
+        const priceText = p.price2 ? `₹ ${p.price} – ${p.price2}` : `₹ ${p.price}`;
+        return `
+          <article class="product-card">
+            <div class="card-image">
+              <span class="ship-badge">${ship}</span>
+              <img src="${p.img}" alt="${p.name}">
+            </div>
+            <div class="card-body">
+              <p class="card-weight">${p.weight}</p>
+              <p class="card-tagline">${p.tagline}</p>
+              <h4 class="card-title">${p.name}</h4>
+              <p class="card-price">${priceText}</p>
+              <div class="card-rating"><span class="stars">★</span> ${p.rating}</div>
+              <button type="button" class="add-to-cart-btn" data-id="${p.id}">Add to Cart</button>
+            </div>
+          </article>`;
+      }
+      function filterSort() {
+        let list = (typeof TCK_PRODUCTS !== 'undefined' ? TCK_PRODUCTS : []).slice();
+        const category = (document.getElementById('filter-category') || {}).value;
+        const sort = (document.getElementById('sort-select') || {}).value;
+        if (category) list = list.filter(p => (p.category || '') === category);
+        if (sort === 'best-selling') list.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        else if (sort === 'price-asc') list.sort((a, b) => (a.price || 0) - (b.price || 0));
+        else if (sort === 'price-desc') list.sort((a, b) => (b.price || 0) - (a.price || 0));
+        return list;
+      }
+      function render() {
+        const grid = document.getElementById('shop-product-grid');
+        if (!grid) return;
+        grid.innerHTML = filterSort().map(renderProduct).join('');
+      }
+      document.getElementById('apply-filters')?.addEventListener('click', render);
+      document.getElementById('sort-select')?.addEventListener('change', render);
+      document.getElementById('filter-category')?.addEventListener('change', render);
+      function init() {
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const catSelect = document.getElementById('filter-category');
+        if (type && catSelect && (type === 'drinks' || type === 'spreads' || type === 'bakes')) {
+          catSelect.value = type;
+        }
+        render();
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    })();
+  </script>
+</body>
+</html>

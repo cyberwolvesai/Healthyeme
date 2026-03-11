@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyeme | Pure. Fresh. Plant-Based.</title>
+  <meta name="description" content="Healthyeme - Almond milk, nut butters, cookies & granola. No preservatives, no added sugar. Ships Pan India.">
+  <meta property="og:title" content="Healthyeme | Plant-Based Goodness">
+  <meta property="og:description" content="Pure. Fresh. Plant-Based. Almond milk, spreads & bakes. Ships Pan India.">
+  <link rel="stylesheet" href="static/tck.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ========== PROMO BAR ========== -->
+  <div class="promo-bar">
+    Free delivery on orders over ₹500 | Pan India delivery in 5–7 days
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+      <a href="index.html" class="header-logo">
+        <img src="https://via.placeholder.com/144x44/4a7c59/ffffff?text=Healthyeme" alt="Healthyeme" width="144" height="44">
+      </a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="shop-all.html">Shop All</a>
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button">Shop ▾</button>
+          <div class="dropdown-menu">
+            <a href="shop-all.html">All Products</a>
+            <a href="shop-all.html?type=drinks">Drinks</a>
+            <a href="shop-all.html?type=spreads">Spreads</a>
+            <a href="shop-all.html?type=bakes">Bakes & Breakfast</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="search.html" class="search-btn" aria-label="Search">Search</a>
+        <a href="login.html" class="login-link">Sign in / Login</a>
+        <a href="cart.html" class="cart-link">Cart <span class="cart-count" id="header-cart-count">0</span> items</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE NAV ========== -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile menu">
+    <button class="mobile-nav-close" type="button" aria-label="Close menu">×</button>
+    <a href="shop-all.html">Shop All</a>
+    <a href="shop-all.html?type=drinks">Drinks</a>
+    <a href="shop-all.html?type=spreads">Spreads</a>
+    <a href="shop-all.html?type=bakes">Bakes & Breakfast</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Sign in / Login</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+
+  <main id="main">
+    <!-- ========== HERO SLIDER ========== -->
+    <section class="hero-slider" aria-label="Hero carousel">
+      <div class="hero-slide" style="background-image: url('https://picsum.photos/seed/hero1/1600/900');">
+        <div class="hero-content">
+          <h1>Pure. Fresh.<br>Plant-Based.</h1>
+          <div class="cta-wrap">
+            <a href="shop-all.html" class="btn-primary">Shop Now</a>
+            <a href="about.html" class="btn-secondary">Our Story</a>
+          </div>
+        </div>
+        <div class="hero-badges">
+          <span>NO PRESERVATIVES</span>
+          <span>NO ADDED SUGAR</span>
+          <span>100% DAIRY-FREE</span>
+          <span>PLANT BASED</span>
+        </div>
+      </div>
+      <button type="button" class="slider-arrow prev" aria-label="Previous slide">‹</button>
+      <button type="button" class="slider-arrow next" aria-label="Next slide">›</button>
+    </section>
+
+    <!-- ========== DIVE IN - SHOP BY TYPE ========== -->
+    <section class="dive-in-section" aria-labelledby="dive-in-heading">
+      <h2 class="section-heading" id="dive-in-heading">Dive In</h2>
+      <div class="container">
+        <div class="dive-in-grid dive-in-grid--three">
+          <a href="shop-all.html?type=drinks" class="dive-in-card">
+            <img src="https://picsum.photos/seed/almond1/688/688" alt="Drinks - Almond milk">
+            <div class="card-overlay">
+              <h3>Drinks</h3>
+              <p class="card-sub">Pure plant-based almond milk. No preservatives, no added sugar.</p>
+            </div>
+          </a>
+          <a href="shop-all.html?type=spreads" class="dive-in-card">
+            <img src="https://picsum.photos/seed/dive4/688/688" alt="Spreads">
+            <div class="card-overlay">
+              <h3>Spreads</h3>
+              <p class="card-sub">Smooth, rich nut butters. Perfect for toast, smoothies & more.</p>
+            </div>
+          </a>
+          <a href="shop-all.html?type=bakes" class="dive-in-card">
+            <img src="https://picsum.photos/seed/dive2/688/688" alt="Bakes">
+            <div class="card-overlay">
+              <h3>Bakes</h3>
+              <p class="card-sub">Cookies, granola & treats. Fresh, clean ingredients.</p>
+            </div>
+          </a>
+        </div>
+        <a href="shop-all.html" class="shop-all-link">Shop All</a>
+      </div>
+    </section>
+
+    <!-- ========== BRAND STORY ========== -->
+    <section class="brand-story-section" aria-labelledby="story-heading">
+      <h2 class="section-heading" id="story-heading">Our Story</h2>
+      <div class="story-tabs" role="tablist">
+        <button type="button" class="story-tab active" role="tab" data-tab="where-it-began">Where It Began</button>
+        <button type="button" class="story-tab" role="tab" data-tab="born-to-bake">What We Believe</button>
+      </div>
+      <div class="story-content-grid" id="story-where-it-began">
+        <div class="story-image">
+          <img src="https://picsum.photos/seed/story1/600/600" alt="Where it all began">
+        </div>
+        <div class="story-text">
+          <h3>Started with a personal struggle</h3>
+          <p>Our founder was diagnosed with PCOS as a young teenager. She turned to nutrition and real ingredients, and began sharing her bakes online. Honest posts grew into a community that today enjoys clean, plant-based food.</p>
+        </div>
+      </div>
+      <div class="story-content-grid reverse" id="story-born-to-bake" style="display:none;">
+        <div class="story-image">
+          <img src="https://picsum.photos/seed/story2/600/600" alt="What we believe">
+        </div>
+        <div class="story-text">
+          <h3>Better for You ingredients</h3>
+          <p>No preservatives, no heavy processing. Real ingredients, kept close to nature. Every swap we make is about food that feels honest and tastes unforgettable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURED COLLECTION ========== -->
+    <section class="featured-section" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured</h2>
+      <div class="container">
+        <div class="product-carousel-wrap">
+          <div class="product-carousel" id="featured-carousel">
+            <article class="product-card">
+              <div class="card-image">
+                <span class="ship-badge">Ships Pan India</span>
+                <img src="https://picsum.photos/seed/almond1/600/600" alt="Almond Milk">
+              </div>
+              <div class="card-body">
+                <p class="card-weight">500 ml / 1 Litre</p>
+                <p class="card-tagline">Pure. Fresh. Plant-Based.</p>
+                <h4 class="card-title">Almond Milk</h4>
+                <p class="card-price">₹ 159 – ₹ 279</p>
+                <div class="card-rating"><span class="stars">★★★★★</span> 4.9</div>
+                <button type="button" class="add-to-cart-btn" data-id="1">Add to Cart</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="card-image">
+                <span class="ship-badge">Ships Pan India</span>
+                <img src="https://picsum.photos/seed/tck26/600/600" alt="Just Almond Butter">
+              </div>
+              <div class="card-body">
+                <p class="card-weight">200 g</p>
+                <p class="card-tagline">Smooth & Almondy</p>
+                <h4 class="card-title">Just Almond Butter</h4>
+                <p class="card-price">₹ 495</p>
+                <div class="card-rating"><span class="stars">★★★★★</span> 5.0</div>
+                <button type="button" class="add-to-cart-btn" data-id="3">Add to Cart</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="card-image">
+                <span class="ship-badge">Ships Pan India</span>
+                <img src="https://picsum.photos/seed/tck27/600/600" alt="Cacao Almond Butter">
+              </div>
+              <div class="card-body">
+                <p class="card-weight">200 g</p>
+                <p class="card-tagline">Chocolatey & Almondy</p>
+                <h4 class="card-title">Cacao Almond Butter</h4>
+                <p class="card-price">₹ 520</p>
+                <div class="card-rating"><span class="stars">★★★★★</span> 4.8</div>
+                <button type="button" class="add-to-cart-btn" data-id="4">Add to Cart</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="card-image">
+                <span class="ship-badge">Ships Pan India</span>
+                <img src="https://picsum.photos/seed/tck2/600/600" alt="Almond Flour & Cacao Cookies">
+              </div>
+              <div class="card-body">
+                <p class="card-weight">5 Cookies (175 g)</p>
+                <p class="card-tagline">Buttery & Flaky</p>
+                <h4 class="card-title">Almond Flour & Cacao Cookies</h4>
+                <p class="card-price">₹ 550</p>
+                <div class="card-rating"><span class="stars">★★★★★</span> 4.8</div>
+                <button type="button" class="add-to-cart-btn" data-id="5">Add to Cart</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="card-image">
+                <span class="ship-badge">Ships Pan India</span>
+                <img src="https://picsum.photos/seed/tck14/600/600" alt="Berry & Banana Millet Granola">
+              </div>
+              <div class="card-body">
+                <p class="card-weight">150 g</p>
+                <p class="card-tagline">Millet-Nola</p>
+                <h4 class="card-title">Berry & Banana Millet Granola</h4>
+                <p class="card-price">₹ 450</p>
+                <div class="card-rating"><span class="stars">★★★★★</span> 4.6</div>
+                <button type="button" class="add-to-cart-btn" data-id="7">Add to Cart</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="card-image">
+                <span class="ship-badge">Ships Pan India</span>
+                <img src="https://picsum.photos/seed/tck8/600/600" alt="Trial Pack">
+              </div>
+              <div class="card-body">
+                <p class="card-weight">6 treats</p>
+                <p class="card-tagline">A lil bit of everything</p>
+                <h4 class="card-title">Trial Pack</h4>
+                <p class="card-price">₹ 395</p>
+                <div class="card-rating"><span class="stars">★★★★☆</span> 4.4</div>
+                <button type="button" class="add-to-cart-btn" data-id="8">Add to Cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top: 24px;"><a href="shop-all.html" class="btn-primary">View All Products</a></p>
+      </div>
+    </section>
+
+    <!-- ========== TRUSTED BY OUR COMMUNITY ========== -->
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading">What People Say</h2>
+      <div class="container">
+        <div class="testimonials-carousel">
+          <div class="testimonial-card">
+            <img src="https://picsum.photos/seed/sk/120/120" alt="" class="testimonial-image">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-name">Simran K.</p>
+            <p class="testimonial-role">Nutritionist</p>
+            <p class="testimonial-text">The almond milk is so clean and the cookies feel indulgent but are secretly good for you.</p>
+            <a href="shop-all.html" class="testimonial-product">Almond Milk</a>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://picsum.photos/seed/nd/120/120" alt="" class="testimonial-image">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-name">Namita D.</p>
+            <p class="testimonial-role">Parent</p>
+            <p class="testimonial-text">My kids love the granola. We order the trial pack every month.</p>
+            <a href="shop-all.html" class="testimonial-product">Trial Pack</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== CART DRAWER ========== -->
+  <div class="cart-drawer-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your cart</h3>
+      <button type="button" class="cart-drawer-close" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-drawer-body">
+      <div class="cart-empty" id="cart-empty">Your cart is empty</div>
+      <div id="cart-items-list"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cart-footer" style="display:none;">
+      <p class="cart-total">Subtotal: &#8377;<span id="cart-subtotal">0</span></p>
+      <a href="cart.html" style="display:block;text-align:center;margin-bottom:8px;font-size:14px;">View full cart</a>
+      <a href="checkout.html" class="btn-primary">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-newsletter">
+        <h4>Healthyeme</h4>
+        <p>Pure. Fresh. Plant-Based. Join us for new flavours and offers.</p>
+        <form action="#" method="post" class="newsletter-form">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop-all.html">Shop All</a></li>
+          <li><a href="shop-all.html?type=drinks">Drinks</a></li>
+          <li><a href="shop-all.html?type=spreads">Spreads</a></li>
+          <li><a href="shop-all.html?type=bakes">Bakes</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Healthyeme. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/products.js"></script>
+  <script src="static/tck.js"></script>
+</body>
+</html>

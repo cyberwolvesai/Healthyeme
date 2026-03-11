@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | The Cinnamon Kitchen</title>
+  <link rel="stylesheet" href="static/tck.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="promo-bar">Code <strong>15PARTY</strong></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo"><img src="https://via.placeholder.com/144x44/2d2a26/ffffff?text=TCK" alt="TCK" width="144" height="44"></a>
+      <nav class="header-nav"><a href="shop-all.html">Shop All</a><a href="best-sellers.html">Best Sellers</a><a href="about.html">About Us</a></nav>
+      <div class="header-actions"><a href="login.html" class="login-link">Sign in</a><a href="cart.html" class="cart-link">Cart <span class="cart-count" id="header-cart-count">0</span> items</a></div>
+    </div>
+  </header>
+  <main class="cart-page container">
+    <h1>Your cart</h1>
+    <div id="cart-page-content">
+      <div id="cart-page-empty" style="text-align:center;padding:48px;color:var(--tck-brown-medium);">Your cart is empty.</div>
+      <a href="shop-all.html" class="btn-primary" id="cart-continue-btn" style="display:none;margin-top:16px;">Continue shopping</a>
+      <div class="cart-items" id="cart-items-wrap" style="display:none;"></div>
+      <div class="cart-summary" id="cart-summary-wrap" style="display:none;">
+        <div class="summary-row">Subtotal <span id="cart-subtotal">0</span></div>
+        <div class="summary-total">Total: Rs.<span id="cart-total">0</span></div>
+        <a href="checkout.html" class="btn-primary">Proceed to Checkout</a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-bottom"><p>2025 The Cinnamon Kitchen.</p></div></footer>
+  <script src="data/products.js"></script>
+  <script src="static/tck.js"></script>
+  <script>
+  (function(){
+    function r(){
+      var c=window.TCK&&window.TCK.getCart?window.TCK.getCart():[];
+      var pm=typeof TCK_PRODUCTS!=="undefined"?Object.fromEntries(TCK_PRODUCTS.map(function(p){return[p.id,p];})):{};
+      var e=document.getElementById("cart-page-empty");
+      var b=document.getElementById("cart-continue-btn");
+      var w=document.getElementById("cart-items-wrap");
+      var s=document.getElementById("cart-summary-wrap");
+      if(c.length===0){if(e)e.style.display="block";if(b)b.style.display="inline-block";if(w)w.style.display="none";if(s)s.style.display="none";return;}
+      if(e)e.style.display="none";if(b)b.style.display="none";
+      if(w){w.style.display="block";var h="";c.forEach(function(item){var p=pm[item.id];if(!p)return;var q=item.qty||1;h+='<div class="cart-item"><img src="'+p.img+'" alt="" class="cart-item-image"><div class="cart-item-details"><h4>'+p.name+'</h4><p class="price">Rs.'+p.price+'</p></div><div class="cart-item-qty"><button type="button" class="qty-minus" data-id="'+p.id+'">-</button><span>'+q+'</span><button type="button" class="qty-plus" data-id="'+p.id+'">+</button></div><button type="button" class="cart-item-remove" data-id="'+p.id+'">Remove</button></div>';});w.innerHTML=h;
+      w.querySelectorAll(".qty-minus").forEach(function(btn){btn.onclick=function(){var id=+this.dataset.id;var c2=window.TCK.getCart();var it=c2.find(function(i){return i.id===id;});if(it)window.TCK.setQty(id,(it.qty||1)-1);r();};});
+      w.querySelectorAll(".qty-plus").forEach(function(btn){btn.onclick=function(){var id=+this.dataset.id;var c2=window.TCK.getCart();var it=c2.find(function(i){return i.id===id;});if(it)window.TCK.setQty(id,(it.qty||1)+1);r();};});
+      w.querySelectorAll(".cart-item-remove").forEach(function(btn){btn.onclick=function(){window.TCK.removeFromCart(+this.dataset.id);r();};});
+      }
+      if(s){s.style.display="block";var t=window.TCK.getCartTotal(pm);var te=document.getElementById("cart-total");if(document.getElementById("cart-subtotal"))document.getElementById("cart-subtotal").textContent="Rs."+t;if(te)te.textContent=t;}
+    }
+    if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",r);else r();
+  })();
+  </script>
+</body>
+</html>
