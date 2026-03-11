@@ -382,7 +382,7 @@ img {
 .dive-in-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.4s ease;
 }
 
@@ -506,7 +506,7 @@ img {
 .product-card .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-card .ship-badge {
