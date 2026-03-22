@@ -10,23 +10,21 @@
   <link rel="stylesheet" href="static/tck.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ========== PROMO BAR ========== -->
   <div class="promo-bar">
-    Free delivery on orders over ₹500 | Pan India delivery in 5–7 days
+    Free delivery on orders over ₹500 · Pan India shipping · Handmade with real ingredients
   </div>
 
-  <!-- ========== HEADER ========== -->
   <header class="site-header">
     <div class="container header-inner">
       <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
       <a href="index.html" class="header-logo">
-        <img src="https://via.placeholder.com/144x44/4a7c59/ffffff?text=Healthyeme" alt="Healthyeme" width="144" height="44">
+        <img src="assets/images/healthyeme_logo.png" alt="Healthyeme" width="160" height="48">
       </a>
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="shop-all.html">Shop All</a>
+        <a href="shop-all.html" class="nav-accent">Shop</a>
+        <a href="best-sellers.html">Best Sellers</a>
         <div class="nav-dropdown">
           <button class="dropdown-toggle" type="button">Shop ▾</button>
           <div class="dropdown-menu">
@@ -46,11 +44,11 @@
     </div>
   </header>
 
-  <!-- ========== MOBILE NAV ========== -->
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile menu">
     <button class="mobile-nav-close" type="button" aria-label="Close menu">×</button>
-    <a href="shop-all.html">Shop All</a>
+    <a href="shop-all.html">Shop</a>
+    <a href="best-sellers.html">Best Sellers</a>
     <a href="shop-all.html?type=drinks">Drinks</a>
     <a href="shop-all.html?type=spreads">Spreads</a>
     <a href="shop-all.html?type=bakes">Bakes & Breakfast</a>
@@ -60,9 +58,8 @@
   </nav>
 
   <main id="main">
-    <!-- ========== HERO SLIDER ========== -->
-    <section class="hero-slider" aria-label="Hero carousel">
-      <div class="hero-slide" style="background-image: url('https://picsum.photos/seed/hero1/1600/900');">
+    <section class="hero-slider" aria-label="Hero">
+      <div class="hero-slide" style="background-image: url('assets/images/banner.png');">
         <div class="hero-content">
           <h1>Pure. Fresh.<br>Plant-Based.</h1>
           <div class="cta-wrap">
@@ -71,77 +68,94 @@
           </div>
         </div>
         <div class="hero-badges">
-          <span>NO PRESERVATIVES</span>
-          <span>NO ADDED SUGAR</span>
-          <span>100% DAIRY-FREE</span>
-          <span>PLANT BASED</span>
+          <span>No preservatives</span>
+          <span>No added sugar</span>
+          <span>100% dairy-free</span>
+          <span>Plant based</span>
         </div>
       </div>
       <button type="button" class="slider-arrow prev" aria-label="Previous slide">‹</button>
       <button type="button" class="slider-arrow next" aria-label="Next slide">›</button>
     </section>
 
-    <!-- ========== DIVE IN - SHOP BY TYPE ========== -->
-    <section class="dive-in-section" aria-labelledby="dive-in-heading">
-      <h2 class="section-heading" id="dive-in-heading">Dive In</h2>
+    <section class="why-us-section" aria-labelledby="why-us-heading">
+      <h2 class="section-heading" id="why-us-heading">Why Us?</h2>
+      <div class="why-us-inner">
+        <p class="why-us-lead">Small-batch plant-based foods made with ingredients you can pronounce. We obsess over taste first—then keep it clean enough to feel good about every bite.</p>
+        <div class="why-us-badges" role="group" aria-label="Quality badges">
+          <img
+            class="why-us-badge-banner"
+            src="assets/images/why-us-quality-badges.png"
+            width="2000"
+            height="400"
+            loading="lazy"
+            decoding="async"
+            alt="100% roasted not fried; vegan and gluten free; no artificial flavors, preservatives or added colors; 100% real natural ingredients">
+        </div>
+      </div>
+    </section>
+
+    <section class="dive-in-section section-band-light" aria-labelledby="browse-cat-heading">
+      <h2 class="section-heading" id="browse-cat-heading">Browse by Categories</h2>
       <div class="container">
-        <div class="dive-in-grid dive-in-grid--three">
+        <div class="dive-in-grid dive-in-grid--six">
           <a href="shop-all.html?type=drinks" class="dive-in-card">
-            <img src="assets/images/1LAlmoundmilk_tatrapack.jpeg" alt="Drinks - Almond milk">
+            <img src="assets/images/1LAlmoundmilk_tatrapack.jpeg" alt="Drinks &amp; almond milk">
             <div class="card-overlay">
-              <h3>Almond Milk</h3>
-              <p class="card-sub">Pure plant-based almond milk. No preservatives, no added sugar.</p>
+              <h3>Plant Drinks</h3>
+              <p class="card-sub">Almond milk &amp; more</p>
             </div>
           </a>
-          <a href="shop-all.html?type=spreads" class="dive-in-card">
-            <img src="assets/images/rowgranola.jpeg" alt="Spreads">
+          <a href="nut-butters-spreads.html" class="dive-in-card">
+            <img src="assets/images/calmondbutter.jpeg" alt="Nut butters &amp; spreads">
             <div class="card-overlay">
-              <h3>Granola</h3>
-              <p class="card-sub">Smooth, rich nut butters. Perfect for toast, smoothies & more.</p>
+              <h3>Spreads</h3>
+              <p class="card-sub">Butters you’ll spoon straight from the jar</p>
             </div>
           </a>
-          <a href="shop-all.html?type=bakes" class="dive-in-card">
-            <img src="assets/images/calmondbutter.jpeg" alt="Bakes">
+          <a href="cookies-baked-goods.html" class="dive-in-card">
+            <img src="assets/images/rowgranola.jpeg" alt="Cookies &amp; baked goods">
             <div class="card-overlay">
-              <h3>Almond Butter</h3>
-              <p class="card-sub">Cookies, granola & treats. Fresh, clean ingredients.</p>
+              <h3>Baked Goods</h3>
+              <p class="card-sub">Cookies &amp; treats</p>
             </div>
           </a>
+          <a href="granola-breakfast.html" class="dive-in-card">
+            <img src="assets/images/almondbutter.jpeg" alt="Granola &amp; breakfast">
+            <div class="card-overlay">
+              <h3>Breakfast</h3>
+              <p class="card-sub">Granola &amp; morning staples</p>
+            </div>
+          </a>
+          <!-- <a href="pantry-staples.html" class="dive-in-card">
+            <img src="https://picsum.photos/seed/pantry/600/600" alt="Pantry staples">
+            <div class="card-overlay">
+              <h3>Pantry</h3>
+              <p class="card-sub">Staples for everyday cooking</p>
+            </div>
+          </a> -->
+          <!-- <a href="shop-all.html" class="dive-in-card">
+            <img src="https://picsum.photos/seed/combo/600/600" alt="Shop all">
+            <div class="card-overlay">
+              <h3>Shop All</h3>
+              <p class="card-sub">Combos &amp; full range</p>
+            </div>
+          </a> -->
         </div>
-        <a href="shop-all.html" class="shop-all-link">Shop All</a>
+        <a href="shop-all.html" class="shop-all-link">View all products</a>
       </div>
     </section>
 
-    <!-- ========== BRAND STORY ========== -->
-    <section class="brand-story-section" aria-labelledby="story-heading">
-      <h2 class="section-heading" id="story-heading">Our Story</h2>
-      <div class="story-tabs" role="tablist">
-        <button type="button" class="story-tab active" role="tab" data-tab="where-it-began">Where It Began</button>
-        <button type="button" class="story-tab" role="tab" data-tab="born-to-bake">What We Believe</button>
-      </div>
-      <div class="story-content-grid" id="story-where-it-began">
-        <div class="story-image">
-          <img src="https://picsum.photos/seed/story1/600/600" alt="Where it all began">
-        </div>
-        <div class="story-text">
-          <h3>Started with a personal struggle</h3>
-          <p>Our founder was diagnosed with PCOS as a young teenager. She turned to nutrition and real ingredients, and began sharing her bakes online. Honest posts grew into a community that today enjoys clean, plant-based food.</p>
-        </div>
-      </div>
-      <div class="story-content-grid reverse" id="story-born-to-bake" style="display:none;">
-        <div class="story-image">
-          <img src="https://picsum.photos/seed/story2/600/600" alt="What we believe">
-        </div>
-        <div class="story-text">
-          <h3>Better for You ingredients</h3>
-          <p>No preservatives, no heavy processing. Real ingredients, kept close to nature. Every swap we make is about food that feels honest and tastes unforgettable.</p>
+    <section class="video-embed-section" aria-label="Brand video">
+      <div class="video-embed-wrap">
+        <div class="video-embed-frame">
+          <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Healthyeme — behind the brand" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
-    <!-- ========== FEATURED COLLECTION ========== -->
-    <section class="featured-section" aria-labelledby="featured-heading">
-      <h2 id="featured-heading">Featured</h2>
+    <section class="featured-section" aria-labelledby="latest-heading">
+      <h2 id="latest-heading">Latest Products</h2>
       <div class="container">
         <div class="product-carousel-wrap">
           <div class="product-carousel" id="featured-carousel">
@@ -166,7 +180,7 @@
               </div>
               <div class="card-body">
                 <p class="card-weight">100g /200 g</p>
-                <p class="card-tagline">Smooth & Almondy</p>
+                <p class="card-tagline">Smooth &amp; Almondy</p>
                 <h4 class="card-title">Just Almond Butter</h4>
                 <p class="card-price">₹250 - ₹450</p>
                 <div class="card-rating"><span class="stars">★★★★★</span> 5.0</div>
@@ -180,7 +194,7 @@
               </div>
               <div class="card-body">
                 <p class="card-weight">100g / 200 g</p>
-                <p class="card-tagline">Chocolatey & Almondy</p>
+                <p class="card-tagline">Chocolatey &amp; Almondy</p>
                 <h4 class="card-title">Cacao Almond Butter</h4>
                 <p class="card-price">₹270 - ₹470</p>
                 <div class="card-rating"><span class="stars">★★★★★</span> 4.8</div>
@@ -190,12 +204,12 @@
             <article class="product-card">
               <div class="card-image">
                 <span class="ship-badge">Ships Pan India</span>
-                <img src="https://picsum.photos/seed/tck2/600/600" alt="Almond Flour & Cacao Cookies">
+                <img src="https://picsum.photos/seed/tck2/600/600" alt="Almond Flour &amp; Cacao Cookies">
               </div>
               <div class="card-body">
                 <p class="card-weight">Granola 250g / 500g</p>
-                <p class="card-tagline">Buttery & Flaky</p>
-                <h4 class="card-title">Almond Flour & Cacao Cookies</h4>
+                <p class="card-tagline">Buttery &amp; Flaky</p>
+                <h4 class="card-title">Almond Flour &amp; Cacao Cookies</h4>
                 <p class="card-price">₹ 550</p>
                 <div class="card-rating"><span class="stars">★★★★★</span> 4.8</div>
                 <button type="button" class="add-to-cart-btn" data-id="5">Add to Cart</button>
@@ -204,12 +218,12 @@
             <article class="product-card">
               <div class="card-image">
                 <span class="ship-badge">Ships Pan India</span>
-                <img src="https://picsum.photos/seed/tck14/600/600" alt="Berry & Banana Millet Granola">
+                <img src="https://picsum.photos/seed/tck14/600/600" alt="Berry &amp; Banana Millet Granola">
               </div>
               <div class="card-body">
                 <p class="card-weight">150 g</p>
                 <p class="card-tagline">Millet-Nola</p>
-                <h4 class="card-title">Berry & Banana Millet Granola</h4>
+                <h4 class="card-title">Berry &amp; Banana Millet Granola</h4>
                 <p class="card-price">₹ 450</p>
                 <div class="card-rating"><span class="stars">★★★★★</span> 4.6</div>
                 <button type="button" class="add-to-cart-btn" data-id="7">Add to Cart</button>
@@ -235,7 +249,85 @@
       </div>
     </section>
 
-    <!-- ========== TRUSTED BY OUR COMMUNITY ========== -->
+    <section class="ht-instagram-section" aria-labelledby="ht-social-heading">
+      <div class="container">
+        <h2 id="ht-social-heading">Healthyeme</h2>
+        <p class="sub">Follow along for new drops, recipes &amp; kitchen snapshots.</p>
+        <div class="ht-instagram-grid">
+          <a href="#" aria-label="Gallery 1"><img src="assets/images/Bar.png" alt=""></a>
+          <a href="#" aria-label="Gallery 2"><img src="assets/images/granola_jar.png" alt=""></a>
+          <a href="#" aria-label="Gallery 3"><img src="assets/images/smoothie_bowl.png" alt=""></a>
+        </div>
+        <p style="margin-top: 28px;"><a href="#" class="btn-primary">Follow on Instagram</a></p>
+      </div>
+    </section>
+
+    <section class="best-sellers-home" aria-labelledby="bestsellers-heading">
+      <h2 class="section-heading" id="bestsellers-heading">Best Sellers</h2>
+      <div class="container">
+        <div class="product-grid" style="padding-top: 0;">
+          <article class="product-card">
+            <div class="card-image">
+              <span class="ship-badge">Ships Pan India</span>
+              <img src="assets/images/calmondbutter.jpeg" alt="Cacao Almond Butter">
+            </div>
+            <div class="card-body">
+              <p class="card-weight">100g / 200 g</p>
+              <p class="card-tagline">Chocolatey &amp; Almondy</p>
+              <h4 class="card-title">Cacao Almond Butter</h4>
+              <p class="card-price">₹270 - ₹470</p>
+              <div class="card-rating"><span class="stars">★★★★★</span> 4.8</div>
+              <button type="button" class="add-to-cart-btn" data-id="4">Add to Cart</button>
+            </div>
+          </article>
+          <!-- <article class="product-card">
+            <div class="card-image">
+              <span class="ship-badge">Ships Pan India</span>
+              <img src="https://picsum.photos/seed/tck2/600/600" alt="Almond Flour &amp; Cacao Cookies">
+            </div>
+            <div class="card-body">
+              <p class="card-weight">Box</p>
+              <p class="card-tagline">Buttery &amp; Flaky</p>
+              <h4 class="card-title">Almond Flour &amp; Cacao Cookies</h4>
+              <p class="card-price">₹ 550</p>
+              <div class="card-rating"><span class="stars">★★★★★</span> 4.8</div>
+              <button type="button" class="add-to-cart-btn" data-id="5">Add to Cart</button>
+            </div>
+          </article> -->
+          <!-- <article class="product-card">
+            <div class="card-image">
+              <span class="ship-badge">Ships Pan India</span>
+              <img src="https://picsum.photos/seed/tck14/600/600" alt="Berry &amp; Banana Millet Granola">
+            </div>
+            <div class="card-body">
+              <p class="card-weight">150 g</p>
+              <p class="card-tagline">Millet-Nola</p>
+              <h4 class="card-title">Berry &amp; Banana Millet Granola</h4>
+              <p class="card-price">₹ 450</p>
+              <div class="card-rating"><span class="stars">★★★★★</span> 4.6</div>
+              <button type="button" class="add-to-cart-btn" data-id="7">Add to Cart</button>
+            </div>
+          </article> -->
+        </div>
+        <p style="text-align:center; margin-top: 8px;"><a href="best-sellers.html" class="shop-all-link" style="display:inline-block;">See all best sellers</a></p>
+      </div>
+    </section>
+
+    <section class="founder-section" aria-labelledby="founder-heading">
+      <h2 class="section-heading" id="founder-heading">Meet the Founder</h2>
+      <div class="founder-grid">
+        <div class="founder-photo">
+          <img src="https://picsum.photos/seed/founder/800/800" alt="Healthyeme founder">
+        </div>
+        <div class="founder-copy">
+          <h3>Started in a home kitchen</h3>
+          <p>What began as a personal journey toward better eating turned into a small brand obsessed with honest labels and flavour that doesn’t feel like a compromise.</p>
+          <p>Every batch is made with the same care we’d feed our own family—real nuts, whole grains, and zero shortcuts. Thank you for letting us be part of your table.</p>
+          <p><a href="about.html" class="btn-primary">Read our story</a></p>
+        </div>
+      </div>
+    </section>
+
     <section class="testimonials-section" aria-labelledby="testimonials-heading">
       <h2 id="testimonials-heading">What People Say</h2>
       <div class="container">
@@ -261,7 +353,6 @@
     </section>
   </main>
 
-  <!-- ========== CART DRAWER ========== -->
   <div class="cart-drawer-overlay" id="cart-overlay" aria-hidden="true"></div>
   <div class="cart-drawer" id="cart-drawer">
     <div class="cart-drawer-header">
@@ -279,7 +370,6 @@
     </div>
   </div>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-newsletter">
@@ -294,9 +384,9 @@
         <h4>Shop</h4>
         <ul>
           <li><a href="shop-all.html">Shop All</a></li>
+          <li><a href="best-sellers.html">Best Sellers</a></li>
           <li><a href="shop-all.html?type=drinks">Drinks</a></li>
           <li><a href="shop-all.html?type=spreads">Spreads</a></li>
-          <li><a href="shop-all.html?type=bakes">Bakes</a></li>
         </ul>
       </div>
       <div class="footer-links">
